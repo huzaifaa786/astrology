@@ -699,7 +699,7 @@ class ChatRequestController extends Controller
             $sId = DB::Table('callrequest')
                 ->where('sId', '=', $req->sId)
                 ->get();
-            if (!($sId && count($sId) > 0)) {
+            if ($sId && count($sId) > 0) {
                 $totalMin = $req->totalMin / 60;
                 $totalMin = round($totalMin);
                 $charge = Astrologer::query()
