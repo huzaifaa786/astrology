@@ -53,7 +53,7 @@ class CallRequestController extends Controller
                     'astrologer' => $req['astrologerId'],
                     'user_device' => $userDeviceDetail,
                 ], 200);*/
-            if ($userDeviceDetail && count($userDeviceDetail) > 0) {
+            if ($userDeviceDetail ) {
                 FCMService::send(
                     $userDeviceDetail,
                     [
