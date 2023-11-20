@@ -42,8 +42,8 @@ class CallRequestController extends Controller
 
             $userDeviceDetail = DB::table('user_device_details')
                 ->JOIN('astrologers', 'astrologers.userId', '=', 'user_device_details.userId')
-                // ->WHERE('astrologers.id', '=', $req['astrologerId'])
-               ->WHERE('astrologers.userId', '=', $req['astrologerId'])
+                ->WHERE('astrologers.id', '=', $req['astrologerId'])
+               // ->WHERE('astrologers.userId', '=', $req['astrologerId'])
                 ->SELECT('user_device_details.*')
                 ->get();
 
