@@ -42,8 +42,8 @@ class CallRequestController extends Controller
 
             $userDeviceDetail = DB::table('user_device_details')
                 ->JOIN('astrologers', 'astrologers.userId', '=', 'user_device_details.userId')
-                ->WHERE('astrologers.id', '=', $req['astrologerId'])
-               // ->WHERE('astrologers.userId', '=', $req['astrologerId'])
+                // ->WHERE('astrologers.id', '=', $req['astrologerId'])
+               ->WHERE('astrologers.userId', '=', $req['astrologerId'])
                 ->SELECT('user_device_details.*')
                 ->get();
 
@@ -53,7 +53,7 @@ class CallRequestController extends Controller
                     'astrologer' => $req['astrologerId'],
                     'user_device' => $userDeviceDetail,
                 ], 200);*/
-            if ($userDeviceDetail ) {
+            if ($userDeviceDetail && count($userDeviceDetail) > 0) {
                 FCMService::send(
                     $userDeviceDetail,
                     [
