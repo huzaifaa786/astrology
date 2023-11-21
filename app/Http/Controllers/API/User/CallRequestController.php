@@ -58,7 +58,7 @@ class CallRequestController extends Controller
                 FCMService::send(
                     $userDeviceDetail,
                     [
-                        'title' => 'Get Call Request',
+                        'title' => 'Call Request Received',
                         'body' => [
                             "notificationType" => 2,
                             'description' => '',

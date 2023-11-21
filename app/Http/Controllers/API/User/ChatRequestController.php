@@ -52,13 +52,13 @@ class ChatRequestController extends Controller
                 FCMService::send(
                     $userDeviceDetail,
                     [
-                        'title' => 'Receive Chat Request From ' . $user[0]->name,
+                        'title' => 'Chat Request Received' . $user[0]->name,
                         'body' => ['description' => '', 'notificationType' => 8],
                     ]
                 );
                 $notification = array(
                     'userId' => $userDeviceDetail[0]->astrologerUserId,
-                    'title' => 'Receive Chat Request From ' . $user[0]->name,
+                    'title' => 'Chat Request Received ' . $user[0]->name,
                     'description' => '',
                     'notificationId' => null,
                     'createdBy' => $userDeviceDetail[0]->astrologerUserId,
