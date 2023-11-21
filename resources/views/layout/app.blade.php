@@ -691,7 +691,7 @@
             <a class="navbar-brand" href="{{ url('home') }}#home" [pageScrollOffset]="75" pageScroll><img
                     src="/build/assets/images/astroTalk.png" alt="logo"
                     style="height: 50px;width: 50px;vertical-align: middle !important;"><span
-                    style="font-size:42px;color:#fff;vertical-align: middle !important;">&nbsp;Astroguru</span></a>
+                    style="font-size:42px;color:#fff;vertical-align: middle !important;">&nbsp;Astrologically</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
                 aria-expanded="false" aria-label="Toggle navigation" onClick="showMenu()">
                 <span class="navbar-toggler-icon"><i class="fa fa-align-justify" aria-hidden="true"></i></span>
