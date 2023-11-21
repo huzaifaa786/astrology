@@ -326,7 +326,6 @@ class AstrologerController extends Controller
                                     $userDeviceDetail->update();
                                 }
                             }
-                            dd($userDeviceDetail);
                         }
                         if ($astrologer) {
                             $astrologer[0]->allSkill = array_map('intval', explode(',', $astrologer[0]->allSkill));
