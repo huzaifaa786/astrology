@@ -47,6 +47,8 @@ class CallRequestController extends Controller
                 ->SELECT('user_device_details.*')
                 ->get();
 
+                dd($userDeviceDetail);
+
                /* return response()->json([
                     'message' => 'Call Request Send Successfully-debug',
                     'status' => 200,
