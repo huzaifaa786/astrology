@@ -299,7 +299,7 @@ class AstrologerController extends Controller
                                 ->where('users.contactNo', '=', $req->contactNo)
                                 ->select('user_device_details.*')
                                 ->get();
-                                dd($userDeviceDetail);
+
                             if ($userDeviceDetail && count($userDeviceDetail) == 0) {
                                 $userDeviceDetail = UserDeviceDetail::create([
                                     'userId' => $astrologer[0]->userId,
@@ -326,6 +326,7 @@ class AstrologerController extends Controller
                                     $userDeviceDetail->update();
                                 }
                             }
+                            dd($userDeviceDetail);
                         }
                         if ($astrologer) {
                             $astrologer[0]->allSkill = array_map('intval', explode(',', $astrologer[0]->allSkill));
